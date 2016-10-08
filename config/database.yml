@@ -16,10 +16,10 @@ default: &default
 
 development:
   <<: *default
-  username: root
-  password:
+  database: <%= ENV["DB_NAME"] %>
+  username: <%= ENV["DB_USER"] %>
+  password: <%= ENV["DB_PASS"] %>
   host: localhost
-  database: sii_development
   socket: /Applications/XAMPP/xamppfiles/var/mysql/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
