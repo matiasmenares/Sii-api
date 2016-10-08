@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rut: MyString
+  name: MyString
+  resolve_number: 1
+  resolve_date: 2016-10-08
+  mail: MyString
+  url: MyString
+
+two:
+  rut: MyString
+  name: MyString
+  resolve_number: 1
+  resolve_date: 2016-10-08
+  mail: MyString
+  url: MyString
