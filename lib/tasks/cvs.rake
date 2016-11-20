@@ -4,7 +4,7 @@ namespace :csv do
 		date = Date.today - 1.day
 		date = date.strftime("%Y%m%d")
 		Company.destroy_all
-		CSV.foreach(Dir.pwd+'/public/ce_empresas_dwnld_'+date.to_s+'.csv', { :col_sep => ';',headers: true, :encoding => 'ISO-8859-1'}) do |row|
+		CSV.foreach(Dir.pwd+'/public/ce_empresas_dwnld_'+date.to_s+'.csv', { col_sep: ';', quote_char: '¢',headers: true, encoding:'ISO-8859-1'}) do |row|
 			Company.create(rut: row["RUT"],name: row["RAZON SOCIAL"],resolve_number: row["NUMERO RESOLUCION"],resolve_date: row["FECHA RESOLUCION"],mail: row["MAIL INTERCAMBIO"],url: row["URL"])
 		end
 	end
